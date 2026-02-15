@@ -49,7 +49,7 @@ body {
 /* NEW: picture in header */
 .header-pic {
   display: block; /* Makes the circle around the picture visible */
-  margin: 12px 215px 12px 215px; /* Makes the picture centred and by adding padding*/
+  margin: 12px auto 12px auto; /* Makes the picture centred and by adding padding*/
 }
 
 /* Class selector */
