@@ -1,0 +1,208 @@
+/*
+Reflection:
+1. What went well?
+- I am really happy with how the webpage turned out. I think the design, color scheme, and layout 
+all work well together. Changing the designs using the inpect element was really helpful since
+I could see the changes in real time and experiment with different styles without going back and 
+and forth between tabs. This allowed me to find what looks best really quick. Since I was having trouble 
+remembering what each diget meant and where it went, I could try so many different combos within a couple
+minuits to figure it out. This portion of the project was what went really well for me. 
+2. What were some challanges you faced?
+- During the project, there was million things that drove me crazy and stumped me. Like figuring out why my 
+profile picture wasn't showing up on the webpage, or why the text was not centering even though I had 
+text-align: center; in the body. I also had a hard time with the two-columns section, and getting the spacing 
+right between the two cards. Mostly it took trial and error. Sometimes youtube videos, websites and gronk would 
+come in handy, but mostly I just had to try something random and see if it worked. For example, I tried every external
+recourse to figure out why my profile pic wasn't showing up and after a few hours, it was just because VS code 
+thought the file was corrupt.
+3. What would you like to add in course project 2?
+- In looking at some portfolios online, I really want to try and adding a bunch of links onto the page. Like adding a
+link to another page with my resume, or some of my projects on github. I also want to add more information, make a 
+backround picture, and just in general get a bit more creative with the design.
+*/
+
+/* Element selector - Makes the jump between sections smooth*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* Element selector - Font, color, text align, and spacing for the body*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 1em;
+  background-color: #f4f6fa;
+  color: #111827;
+  text-align: center; /* Centers all text on the page */
+}
+
+/* Class selector  - Color and padding for site header */
+.site-header {
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+}
+/* Class selector  - Adds a padding south of my name only*/
+.site-header h1 {
+  margin: 0 0 10px 0;
+}
+
+/* NEW: picture in header */
+.header-pic {
+  display: block; /* Makes the circle around the picture visible */
+  margin: 12px 215px 12px 215px; /* Makes the picture centred and by adding padding*/
+}
+
+/* Class selector */
+.nav-list {
+  list-style: none; /* Removes default bullet points */
+  display: flex; /* Makes the list items appear in a row (horizontally) */
+  gap: 15px; /* Adds space between each link */
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Centers the text */
+}
+
+/* Class selector */
+.nav-list a {
+  color: white;
+  text-decoration: none; /* Removes underline */
+  padding: 6px 10px;
+  border-radius: 8px; /* Adds rounded corners to the link background */
+  display: inline-block; /* Makes the padding and background visible/clickable */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth animation for hover */
+}
+
+/* Pseudo-class selector */
+.nav-list a:hover /* Creates the base animation effects for hover (bigger text & color chnage) */{
+  transform: scale(1.08);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Class selector  - Color, CenteredContent, RoundedCorners, and a SoftShadow added */
+.card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Class selector - Fized square size, crops the image, and adds border*/
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image circular */
+  border: 3px solid #ccc;
+  transition: transform 0.25s ease; /* Smooth animation for hover */
+}
+
+.profile-img:hover {
+  transform: scale(1.08); /* Slightly enlarges the image on hover */
+}
+
+/* NEW: Skills next to Projects - Places Skills and Projects side-by-side and keeps spacing even*/
+.two-columns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 10px;
+  flex-wrap: wrap; /* Allows the columns to wrap on smaller screens */
+}
+
+.two-columns .card /* Balanced columns and prevents them from getting too wide or narrow */ {
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+}
+
+/* Keeps the bullet list centered but readable */
+.center-list {
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Class selector */
+.project {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover /* Text enlarges and shadow increases on hover*/{
+  transform: scale(1.03);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12); /* Additional shadow increase to have more of an effect*/
+}
+
+/* NEW: Divider line - Black line separating Contact from the rest of page  */
+.section-divider {
+  border: none;
+  border-top: 4px solid black;
+  width: 85%;
+  margin: 35px auto 15px;
+}
+
+/* Attribute selector - Makes the required fields stand out with a purple left border */
+input[required], textarea[required] {
+  border-left: 4px solid #5708b7;
+}
+
+/* Element selector - Even spacing and centred*/
+form {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+  justify-items: center;
+}
+
+/* Element selector - Makes labels bold */
+label {
+  font-weight: 700;
+}
+
+/* Element selector - Color, padding, and border styling for input fields */
+input, textarea {
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* ID selector - Text box bigger, virticle resizing*/
+#message {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Element selector - Makes the button look more visually appealing */
+button {
+  padding: 10px 14px;
+  background-color: #5708b7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Element selector - Button enlarges and darkens slightly on hover */
+button:hover {
+  transform: scale(1.08);
+  filter: brightness(0.95);
+}
+
+/* Element selector - Aligns text in footer, color and padding*/
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #6b7280;
+}

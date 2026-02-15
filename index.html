@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Sturik | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Header + Navigation -->
+  <header class="site-header">
+    <h1>Alex Sturik</h1>
+
+    <!-- Profile picture -->
+    <img src="images/IMG_1731.jpeg" alt="Profile Image" class="profile-img header-pic">
+    
+    <!-- Navigation links scroll to sections - just links the nav to the below sections. -->
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        A full-time college student, with a passion for computers. 
+        Inquisitive by nature, always interested in learning new ideas 
+        and skills, as well as looking for better, more efficient ways 
+        to do things. Volunteer experience with organizations like, 
+        Caledon Community Services and Fighting Blindness Canada. 
+        Active outdoors, enjoys fishing, wake surfing, swimming, 
+        snowboarding, skateboarding, learning to golf, and playing with his dog
+      </p>
+    </section>
+
+    <!-- SKILLS + PROJECTS SIDE BY SIDE -->
+    <div class="two-columns">
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="card">
+        <h2>Skills</h2>
+        <ul class="center-list">
+          <li>HTML & semantic structure</li>
+          <li>CSS styling & layout</li>
+          <li>Java programming fundamentals</li>
+          <li>GitHub & version control</li>
+          <li>Problem solving & debugging</li>
+        </ul>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="card">
+        <h2>Projects</h2>
+        <p>
+          My Java Projects:
+        </p>
+        <article class="project">
+          <h3>Weather Report Program</h3>
+          <p>Java program using conditionals and input validation.</p>
+        </article>
+        <article class="project">
+          <h3>Grocery ArrayList Lab</h3>
+          <p>Java menu program using ArrayLists and loops.</p>
+        </article>
+      </section>
+    </div>
+
+    <!-- Solid Line  -->
+    <hr class="section-divider">
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" required minlength="2">
+        <label for="email">Email *</label>
+        <input type="email" id="email" required>
+        <label for="message">Message *</label>
+        <textarea id="message" required minlength="10"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>2026 Alex Sturik</p>
+  </footer>
+</body>
+</html>
