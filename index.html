@@ -23,6 +23,8 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    <button id = "darkModeBtn" type = "button">Toggle Dark Mode</button>
   </header>
 
   <main>
@@ -63,10 +65,23 @@
         <article class="project">
           <h3>Weather Report Program</h3>
           <p>Java program using conditionals and input validation.</p>
+
+          <button class="toggleBtn">Show More</button>
+          <p class = "extraInfo">
+          This project uses Scanner input, validation loops, and conditional
+          statements to generate a formatted weather report.
+          </p>
         </article>
+
         <article class="project">
           <h3>Grocery ArrayList Lab</h3>
           <p>Java menu program using ArrayLists and loops.</p>
+
+          <button class="toggleBtn">Show More</button>
+          <p class = "extraInfo">
+            This project uses ArrayLists to store grocery items with prices, and allows the user 
+            to add, remove, and display items throygh a menu system. Using loops and conditional 
+            statements to control user insteraction.
         </article>
       </section>
     </div>
@@ -76,21 +91,29 @@
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="card">
+
       <h2>Contact Me</h2>
-      <form>
+      <form id = "contactForm">
         <label for="name">Full Name *</label>
-        <input type="text" id="name" required minlength="2">
+        <input type="text" id="name" name="name" required minlength="2">
+
         <label for="email">Email *</label>
-        <input type="email" id="email" required>
+        <input type="email" id="email" name="email" required>
+
         <label for="message">Message *</label>
-        <textarea id="message" required minlength="10"></textarea>
+        <textarea id="message" name="message" required minlength="10"></textarea>
         <button type="submit">Send Message</button>
+
+        <p id = "formMessage"></p> <!-- Message container for form submission feedback -->
       </form>
+
     </section>
   </main>
 
   <footer>
     <p>2026 Alex Sturik</p>
   </footer>
+
+  <script src="javaScript.js"></script>
 </body>
 </html>

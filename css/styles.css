@@ -1,5 +1,5 @@
 /*
-Reflection:
+Reflection: (Phase One)
 1. What went well?
 - I am really happy with how the webpage turned out. I think the design, color scheme, and layout 
 all work well together. Changing the designs using the inpect element was really helpful since
@@ -104,12 +104,10 @@ body {
 
 /* NEW: Skills next to Projects - Places Skills and Projects side-by-side and keeps spacing even*/
 .two-columns {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
-  justify-content: center;
-  align-items: stretch;
   padding: 0 10px;
-  flex-wrap: wrap; /* Allows the columns to wrap on smaller screens */
 }
 
 .two-columns .card /* Balanced columns and prevents them from getting too wide or narrow */ {
@@ -205,4 +203,50 @@ footer {
   text-align: center;
   padding: 15px;
   color: #6b7280;
+}
+
+/* Responsive Layout for Larger Screens */
+@media (min-width: 768px) {
+  .two-columns {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch; /* Ensures both columns are the same height */
+  }
+  
+  .nav-list {
+    justify-content: center; /* Keeps the navigation links centered on larger screens */
+  }
+}
+
+/* Dark mode styles */
+.dark-mode { /*Background*/
+  background-color: #111827; /* Dark background*/
+  color: #f9fafb; /* Light Text */
+}
+
+.dark-mode .card { /*Content Cards*/
+  background-color: #1f2937; /* Dark background*/
+  color: #f9fafb; /* Light Text */
+}
+
+.dark-mode footer { /* Footer Text */
+  color: #d1d5db; /* Lighter gray for footer text */
+}
+/* Dark mode styles for input fields and textarea */
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #374151; /* Background for fields*/
+  color: white; /* Text color */
+  border: 1px solid #6b7280; /* Border color */
+}
+
+/* Project details */
+.extraInfo { /* The extra project info*/
+  display: none; /* Hidden by default */
+}
+
+/* Contact form Message */
+#formMessage { /* The thank you message */
+  margin-top: 10px; /* Space above the message */
+  font-weight: bold; /* Makes the message bold */
+  color: rgb(136, 0, 255); /* Purple color for the message */
 }
